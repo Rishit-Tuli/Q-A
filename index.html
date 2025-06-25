@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body{
+        background-color: yellow;
+    }
+.button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button5 {
+    border: 2px solid black;
+   background-color: cyan;
+  color: black;
+  margin-right: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.button5:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+.correct {
+    background-color: green;
+    color: white;
+}
+.fontGiver{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: aqua;
+    display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.wrong {
+    background-color: red;
+    color: white;
+}
+.inputBox{
+    background-color: aqua;
+    transition-duration: 0.5s;
+    border: #555555 2px solid;
+    color: black;
+    font-style: italic;
+}
+.inputBox:hover{
+    background-color: white;
+    transition-duration: 0.5s;
+}
+</style>
+</head>
+<body>
+<h1 style="font-family: 'Courier New', Courier, monospace;">Freedom Ride 1965</h1>
+
+<button class="fontGiver" onClick="window.location.reload();">Refresh Page</button>
+<h2 style="font-family: 'Courier New', Courier, monospace;">1.) Who was the main leader in the 1965 Freedom Ride?</h2>
+
+<button id="button1" class="button button5" onclick="checkAnswer('button1', 'wrong')"> Jim Spigelman</button>
+<button id="button2" class="button button5" onclick="checkAnswer('button2', 'wrong')"> Louis</button>
+<button id="button3" class="button button5" onclick="checkAnswer('button3', 'correct')"> Charles Perkins</button>
+<button id="button4" class="button button5" onclick="checkAnswer('button4', 'wrong')"> Rahim</button>
+
+
+
+ <h2 style="font-family: 'Courier New', Courier, monospace;">2.) What state did the event take place in?</h2>
+    <input type="text" id="answerInput" placeholder="Enter your answer" class="inputBox">
+    <button onclick="checkAnswerBox()" class="inputBox">Check Answer</button>
+    <div id="result"></div>
+<h2 style="font-family: 'Courier New', Courier, monospace;">3.) What was the primary aim of the 1965 Freedom Ride in Australia?</h2>
+
+<button id="button5" class="button button5" onclick="checkAnswer1('button5', 'wrong')"> To protest against the Vietnam War.</button>
+<button id="button6" class="button button5" onclick="checkAnswer1('button6', 'wrong')">  To advocate for environmental protection.</button>
+<button id="button7" class="button button5" onclick="checkAnswer1('button7', 'correct')">  To expose and challenge racial discrimination against Aboriginal Australians.</button>
+<button id="button8" class="button button5" onclick="checkAnswer1('button8', 'wrong')"> To campaign for women's suffrage.</button>
+
+<h2 style="font-family: 'Courier New', Courier, monospace;">4.) Which prominent Aboriginal student leader organized and led the 1965 Freedom Ride?</h2>
+
+<button id="button9" class="button button5" onclick="checkAnswer2('button9', 'wrong')"> Eddie Mabo</button>
+<button id="button10" class="button button5" onclick="checkAnswer2('button10', 'correct')">Charles Perkins </button>
+<button id="button11" class="button button5" onclick="checkAnswer2('button11', 'wrong')"> Neville Bonner</button>
+<button id="button12" class="button button5" onclick="checkAnswer2('button12', 'wrong')"> Vincent Lingiari</button>
+
+<h2 style="font-family: 'Courier New', Courier, monospace;">5.)Which New South Wales town was famously the site of a significant confrontation during the Freedom Ride, involving protests against discriminatory practices at a public swimming pool and RSL club? </h2>
+
+<button id="button13" class="button button5" onclick="checkAnswer3('button13', 'wrong')">  Dubbo</button>
+<button id="button14" class="button button5" onclick="checkAnswer3('button14', 'wrong')">Walgett</button>
+<button id="button15" class="button button5" onclick="checkAnswer3('button15', 'correct')">  Moree</button>
+<button id="button16" class="button button5" onclick="checkAnswer3('button16', 'wrong')"> Lismore</button>
+
+
+<script>
+    function checkAnswer(buttonId, result) {
+    const button = document.getElementById(buttonId);
+    if (result === 'correct') {
+        button.textContent = 'Correct';
+        button.classList.add('correct');
+    } else {
+        button.textContent = 'Wrong';
+        button.classList.add('wrong');
+    }
+            document.getElementById('button1').disabled = true;
+            document.getElementById('button2').disabled = true;
+            document.getElementById('button3').disabled = true;
+            document.getElementById('button4').disabled = true;
+
+            // Check the selected option
+            if (result === 'correct') {
+                alert('Correct!');
+            } else {
+                alert('Incorrect. The correct answer is Charles Perkins.');
+            }
+}      
+function checkAnswer1(buttonId, result) {
+    const button = document.getElementById(buttonId);
+    if (result === 'correct') {
+        button.textContent = 'Correct';
+        button.classList.add('correct');
+    } else {
+        button.textContent = 'Wrong';
+        button.classList.add('wrong');
+    }
+            document.getElementById('button5').disabled = true;
+            document.getElementById('button6').disabled = true;
+            document.getElementById('button7').disabled = true;
+            document.getElementById('button8').disabled = true;
+
+            // Check the selected option
+            if (result === 'correct') {
+                alert('Correct!');
+            } else {
+                alert('Incorrect. The correct answer is  To expose and challenge racial discrimination against Aboriginal Australians..');
+            }
+}              
+function checkAnswer2(buttonId, result) {
+    const button = document.getElementById(buttonId);
+    if (result === 'correct') {
+        button.textContent = 'Correct';
+        button.classList.add('correct');
+    } else {
+        button.textContent = 'Wrong';
+        button.classList.add('wrong');
+    }
+            document.getElementById('button9').disabled = true;
+            document.getElementById('button10').disabled = true;
+            document.getElementById('button11').disabled = true;
+            document.getElementById('button12').disabled = true;
+
+            // Check the selected option
+            if (result === 'correct') {
+                alert('Correct!');
+            } else {
+                alert('Incorrect. The correct answer is Charles Perkins');
+            }
+}              
+function checkAnswer3(buttonId, result) {
+    const button = document.getElementById(buttonId);
+    if (result === 'correct') {
+        button.textContent = 'Correct';
+        button.classList.add('correct');
+    } else {
+        button.textContent = 'Wrong';
+        button.classList.add('wrong');
+    }
+            document.getElementById('button13').disabled = true;
+            document.getElementById('button14').disabled = true;
+            document.getElementById('button15').disabled = true;
+            document.getElementById('button16').disabled = true;
+
+            // Check the selected option
+            if (result === 'correct') {
+                alert('Correct!');
+            } else {
+                alert('Incorrect. The correct answer is Moore');
+            }
+}              
+        function checkAnswerBox() {
+            // Correct answer
+            const correctAnswer = "New South Wales";
+
+            // Get user's answer
+            const userAnswer = document.getElementById("answerInput").value.trim();
+
+            // Check if the answer is correct
+            const resultDiv = document.getElementById("result");
+            if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+                resultDiv.textContent = "Correct!";
+                resultDiv.style.color = "green";
+            } else {
+                resultDiv.textContent = "Incorrect. Try again!";
+                resultDiv.style.color = "red";
+            }
+        }
+</script>
+</body>
+</html>
